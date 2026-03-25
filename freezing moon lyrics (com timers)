@@ -1,0 +1,38 @@
+import sys
+from rich import print
+from time import sleep
+
+def hide_cursor():
+    sys.stdout.write("\033[?25l")
+    sys.stdout.flush()
+
+def show_cursor():
+    sys.stdout.write("\033[?25h")
+    sys.stdout.flush()
+
+def print_lyrics():
+    lines = [
+        ("Everything looks so strange...", 0.12, 1.5),
+        ("Everything looks so cold...", 0.12, 1.5),
+        ("I am a mortal, but am I human?", 0.1, 2.0),
+        ("How can it be so cold?", 0.15, 1.0),
+        ("How can it be so... cruel?", 0.2, 3.0),
+    ]
+
+    for line_text, char_delay, line_delay in lines:
+        for char in line_text:
+            print(f"[bold white]{char}[/bold white]", end="", flush=True)
+            sleep(char_delay)
+        print() 
+        sleep(line_delay)
+
+if __name__ == "__main__":
+    try:
+        hide_cursor()
+        print("\n[bold grey37]-- Freezing Moon --[/bold grey37]\n")
+        sleep(2) 
+        print_lyrics()
+    except KeyboardInterrupt:
+        pass
+    finally:
+        show_cursor()
