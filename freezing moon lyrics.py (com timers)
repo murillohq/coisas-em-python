@@ -12,25 +12,40 @@ def show_cursor():
 
 def print_lyrics():
     lines = [
-        ("Everything looks so strange...", 0.12, 1.5),
-        ("Everything looks so cold...", 0.12, 1.5),
-        ("I am a mortal, but am I human?", 0.1, 2.0),
-        ("How can it be so cold?", 0.15, 1.0),
-        ("How can it be so... cruel?", 0.2, 3.0),
+        ("Everything here is so cold", 0.1, 1.2),
+        ("Everything here is so dark", 0.1, 1.2),
+        ("I remember it as from a dream", 0.08, 1.2),
+        ("In the corner of this time", 0.1, 3.0),
+        
+        ("Diabolic shapes float by", 0.1, 1.2),
+        ("Out from the dark", 0.12, 1.2),
+        ("I remember it was here I died", 0.08, 1.5),
+        ("By following the freezing Moon", 0.12, 3.0),
+        
+        ("It's night again, night, you beautiful", 0.09, 1.5),
+        ("I please my hunger on living humans", 0.07, 1.5),
+        ("Night of hunger, follow its call", 0.1, 1.5),
+        ("Follow the freezing Moon", 0.15, 3.0),
+        
+        ("Darkness is growing, eternity opens", 0.08, 1.5),
+        ("The cemetery lights up again", 0.09, 1.5),
+        ("As in ancient times", 0.12, 1.5),
+        ("Fallen souls die behind my steps", 0.08, 1.5),
+        ("By following the freezing Moon", 0.15, 5.0),
     ]
 
-    for line_text, char_delay, line_delay in lines:
-        for char in line_text:
-            print(f"[bold white]{char}[/bold white]", end="", flush=True)
-            sleep(char_delay)
+    for text, char_speed, line_pause in lines:
+        for char in text:
+            print(f"[bold grey37]{char}[/bold grey37]", end="", flush=True)
+            sleep(char_speed)
         print() 
-        sleep(line_delay)
+        sleep(line_pause)
 
 if __name__ == "__main__":
     try:
         hide_cursor()
-        print("\n[bold grey37]-- Freezing Moon --[/bold grey37]\n")
-        sleep(2) 
+        print("\n[bold red]MAYHEM - FREEZING MOON[/bold red]\n")
+        sleep(1) 
         print_lyrics()
     except KeyboardInterrupt:
         pass
