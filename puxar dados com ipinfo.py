@@ -1,13 +1,11 @@
-import ipinfo
+import requests
 
-#iniciar 
-handler = ipinfo.getHandlerLite(access_token='')
+resposta = requests.get("https://ipinfo.io/json?token=").json()
 
-# puxa o ip de quem ta chamando
-details = handler.getDetails()
-
-print(details.ip)
-print(details.country_code)
-print(details.country) 
-print(details.asn)
-print(details.as_name)
+print("🌐 IP:      ", resposta.get("ip"))
+print("🏳️  País:    ", resposta.get("country"))
+print("📍 Estado:  ", resposta.get("region"))
+print("🏙️  Cidade:  ", resposta.get("city"))
+print("📮 CEP:     ", resposta.get("postal"))
+print("🗺️  Loc:     ", resposta.get("loc"))
+print("🏢 Org:     ", resposta.get("org"))
