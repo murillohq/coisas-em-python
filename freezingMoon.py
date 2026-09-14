@@ -10,6 +10,8 @@ def show_cursor():
     sys.stdout.write("\033[?25h")
     sys.stdout.flush()
 
+# adicionar timers com time 
+
 def print_lyrics():
     lines = [
         ("Everything here is so cold", 0.1, 1.2),

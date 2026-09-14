@@ -30,5 +30,4 @@ if __name__ == "__main__":
     if link.strip():
         baixar_midia(link)
     else:
-        print("URL inválid
-        a.")
+        print("URL inválida.")
