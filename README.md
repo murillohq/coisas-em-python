@@ -1,2 +1,2 @@
 # coisas-em-python
-qualquer coisa que eu pensar, em python
+Arquivos que eu pensar ou feitos na internet, feitos com python. eles nao tem nenhuma importancia significativa, mas salvo pra se precisar depois
